@@ -2,8 +2,9 @@
   color: var(--textcolor);
 }
 
-
-
-::ng-deep svg {
-  fill: var(--accent) !important;
+.svg {
+  ::ng-deep svg {
+    fill: var(--accent) !important;
+  }
 }
+

@@ -4,7 +4,7 @@ import { DataService } from 'src/app/services/data.service';
 @Component({
   selector: 'app-news',
   templateUrl: './news.component.html',
-  styleUrls: ['./news.component.scss']
+  styleUrls: ['./news.component.scss'],
 })
 export class NewsComponent {
   public news: any = [];
@@ -12,9 +12,13 @@ export class NewsComponent {
     this.getNews();
   }
 
+  ngOnInit() {
+    this.news = [];
+  }
+
   public getNews() {
     this.dataService.getNews().subscribe((res: any) => {
-      this.news = [];
+      if (res.length <= 0 || res.length == undefined) return;
       res.forEach((el: any) => {
         this.news.push(el);
       });

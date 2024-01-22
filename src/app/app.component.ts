@@ -46,6 +46,7 @@ export class AppComponent {
 
   async ngOnInit() {
     await this.getMessage();
+    this.message = [];
   }
 
   public openDialog() {
@@ -58,8 +59,7 @@ export class AppComponent {
 
   public async getMessage() {
     this.dataService.getMessage().subscribe((res: any) => {
-      this.message = [];
-      if (res == 'notActive') return;
+      if (res.length <= 0 || res.length == undefined ) return;
       res.forEach((el: any) => {
         this.message.push(el);
       });

@@ -1,28 +1,31 @@
+//Section 2
+
 .team {
-  .member:hover {
-    transform: translate(0, -10px);
+    .member:hover {
+      transform: translate(0, -10px);
+      transition: var(--longTransition);
+      box-shadow: 0 10px 15px -3px rgb(32, 33, 36);
+    }
+  }
+  
+  .member {
+    background-color: var(--background);
+  }
+  @media (max-width: 380px) {
+    ::ng-deep .header {
+      word-break: break-all !important;
+    }
+  }
+  .member {
     transition: var(--longTransition);
-    box-shadow: 0 10px 15px -3px rgb(32, 33, 36);
+    text-align: center;
   }
-}
-
-.member {
-  background-color: var(--background);
-}
-@media (max-width: 380px) {
-  ::ng-deep .header {
-    word-break: break-all !important;
+  
+  ::ng-deep svg {
+    fill: var(--textcolor) !important;
   }
-}
-.member {
-  transition: var(--longTransition);
-  text-align: center;
-}
-
-::ng-deep svg {
-  fill: var(--textcolor) !important;
-}
-
-* {
-  color: var(--textcolor);
-}
+  
+  * {
+    color: var(--textcolor);
+  }
+  

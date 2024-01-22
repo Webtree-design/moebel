@@ -9,6 +9,12 @@ import { MatMenuModule } from '@angular/material/menu';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { DialogModule } from '@angular/cdk/dialog';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import {MatCheckboxModule} from '@angular/material/checkbox';
+import { MatStepperModule } from '@angular/material/stepper';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -42,6 +48,14 @@ import { KontaktComponent } from './components/kontakt/kontakt.component';
     MatButtonModule,
     MatIconModule,
     DialogModule,
+    MatCheckboxModule,
+    MatInputModule,
+    MatFormFieldModule,
+    MatStepperModule,
+    FormsModule,
+    ReactiveFormsModule,
+    MatSnackBarModule
+    
   ],
   providers: [],
   bootstrap: [AppComponent],

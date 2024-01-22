@@ -1,1 +1,96 @@
-<p>kontakt works!</p>
+<section class="px-6 py-8" style="background-color: var(--background)">
+    <div
+      class="slicedImages-Section gap-16 items-center mx-auto max-w-screen-xl md:grid md:grid-cols-2"
+    >
+      <div class="font-light  sm:text-lg">
+        <h1 class="text-3xl font-bold mb-6">Kontaktieren Sie uns</h1>
+          <p class=" pb-3">
+            Wenn Sie Fragen zu unseren Leistungen und Angeboten haben oder einen
+            Termin vereinbaren wollen, können Sie das folgende Formular nutzen!
+            <br />
+            <br />
+            Wir werden uns umgehend bei Ihnen melden.
+          </p>
+  
+          <br />
+          <p
+            class="hover:text-blue-500 flex flex-wrap items-center  mb-2"
+          >
+            <span class="material-symbols-outlined" style="font-size: 20px">
+              mail
+            </span>
+            <a href="mailto: info@mail.de"
+              >info@mail.de</a
+            >
+          </p>
+      </div>
+      <div class="grid grid-cols-1 gap-4 mt-8">
+        <mat-stepper [linear]="true" #stepper>
+          <mat-step [stepControl]="nineFormGroup">
+            <div class="flex justify-center items-center"></div>
+            <form [formGroup]="nineFormGroup" class="flex justify-center">
+              <div class="flex justify-center items-center flex-col">
+                <mat-form-field>
+                  <input
+                    formControlName="eName"
+                    matInput
+                    placeholder="Vor- und Nachname"
+                    required
+                  />
+                </mat-form-field>
+                <mat-form-field>
+                  <input
+                    formControlName="eEmail"
+                    matInput
+                    placeholder="Email"
+                    required
+                  />
+                </mat-form-field>
+                <mat-form-field>
+                  <input
+                    formControlName="eBetreff"
+                    matInput
+                    placeholder="Betreff"
+                    required
+                  />
+                </mat-form-field>
+                <mat-form-field>
+                  <input
+                    formControlName="eMessage"
+                    matInput
+                    placeholder="Nachricht"
+                    required
+                  />
+                </mat-form-field>
+  
+                <!-- <input type="checkbox" formControlName="box" required /> -->
+                <mat-checkbox
+                  formControlName="eCheckbox"
+                  required
+                  style="font-size: 16px"
+                  >Ich habe die
+                  <a
+                    routerLink="/datenschutzerklaerung"
+                    routerLinkActive="routeIsActive"
+                    class="box-agb"
+                    >Datenschutzerklärung</a
+                  >
+                  gelesen und akzeptierte sie</mat-checkbox
+                >
+              </div>
+            </form>
+  
+            <div
+              class="flex flex-row justify-center items-center my-6 gap-6 nextButton"
+            >
+              <button class="w-2/3 senden-btn" mat-button (click)="createEmail()">
+                Email Senden
+              </button>
+            </div>
+          </mat-step>
+        </mat-stepper>
+      </div>
+    </div>
+  </section>
+  
+  

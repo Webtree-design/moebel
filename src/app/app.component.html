@@ -66,7 +66,7 @@
     <div
       class="w-[100%] flex flex-row justify-between mx-auto max-w-screen-xl px-3 py-3"
     >
-      <div>
+      <div class="cursor-pointer" (click)="scroll(section1)">
         <img style="height: 70px" src="../assets/logo_img.png" alt="harley" />
       </div>
 
@@ -93,7 +93,7 @@
     class="fixed flex justify-between items-center md:hidden w-[100%] h-[90px] px-6"
     style="z-index: 100"
   >
-    <div>
+    <div class="cursor-pointer" (click)="scroll(section1)">
       <img style="height: 70px" src="../assets/logo_img.png" alt="harley" />
     </div>
     <button (click)="drawer.toggle()">
@@ -127,7 +127,7 @@
   </div>
 
   <footer
-    class="p-4 rounded-lg shadow md:flex md:items-center md:justify-between md:p-6 flex flex-col"
+    class="p-4 rounded-lg shadow md:flex md:items-center md:justify-between md:p-6 flex flex-col" style="background-color: var(--toolbar);"
   >
     <div
       class="mb-6 contentblock-one container mx-auto flex flex-col text-center items-center"
