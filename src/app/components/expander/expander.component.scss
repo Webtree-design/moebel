@@ -1,0 +1,16 @@
+::ng-deep mat-expansion-panel {
+  border-radius: 0.5rem !important;
+  background-color: var(--toolbar) !important;
+  height: auto !important;
+  min-height: 50px !important ;
+}
+::ng-deep mat-expansion-panel-header {
+  border-radius: 0.5rem !important;
+  background-color: var(--toolbar) !important;
+  height: auto !important;
+  min-height: 50px !important ;
+}
+
+* {
+  color: var(--textcolor) !important;
+}

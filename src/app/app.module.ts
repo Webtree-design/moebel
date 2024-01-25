@@ -15,6 +15,7 @@ import {MatCheckboxModule} from '@angular/material/checkbox';
 import { MatStepperModule } from '@angular/material/stepper';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
+import { MatExpansionModule } from '@angular/material/expansion';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -25,6 +26,7 @@ import { UeberunsComponent } from './components/ueberuns/ueberuns.component';
 import { PopupComponent } from './components/dialogs/popup/popup.component';
 import { NewsComponent } from './components/news/news.component';
 import { KontaktComponent } from './components/kontakt/kontakt.component';
+import { ExpanderComponent } from './components/expander/expander.component';
 
 
 @NgModule({
@@ -34,7 +36,8 @@ import { KontaktComponent } from './components/kontakt/kontakt.component';
     UeberunsComponent,
     PopupComponent,
     NewsComponent,
-    KontaktComponent
+    KontaktComponent,
+    ExpanderComponent
   ],
   imports: [
     BrowserModule, //.withServerTransition({ appId: 'serverApp' }),
@@ -54,7 +57,8 @@ import { KontaktComponent } from './components/kontakt/kontakt.component';
     MatStepperModule,
     FormsModule,
     ReactiveFormsModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    MatExpansionModule
     
   ],
   providers: [],

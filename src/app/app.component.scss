@@ -7,10 +7,11 @@
       font-weight: bold;
       transition: 0.1s;
       font-weight: 800;
+      transition: var(--shortTransition);
     }
     a:hover {
       color: var(--accent);
-      transition: 0.1s;
+      transition: var(--shortTransition);
     }
   }
 }
@@ -19,27 +20,59 @@
   background-color: var(--background);
 }
 
-.banner {
-  height: 20vh;
-  width: 100%;
-  background-position: 50% 50%;
-  background-image: url("../assets/motorcycle-459594_1920.jpg");
-  opacity: 0.8;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
+@supports (-webkit-touch-callout: none) {
+  /* CSS specific to iOS devices */
+  .banner {
+    height: 190px;
+    width: 100%;
+    background-position: 50% 10%;
+    background-image: url("../assets/motorcycle-459594_1920.jpg");
+    opacity: 0.8;
+    background-repeat: no-repeat;
+  }
+}
+
+@supports not (-webkit-touch-callout: none) {
+  /* CSS for other than iOS devices */
+  .banner {
+    height: 190px;
+    width: 100%;
+    background-position: 50% 50%;
+    background-image: url("../assets/motorcycle-459594_1920.jpg");
+    opacity: 0.8;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  }
 }
 
 ::ng-deep .ngStyleAfter {
   background-color: var(--toolbar);
-  transition: var(--shortTransition);
+  transition: var(--longTransition);
   box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
 }
 
 ::ng-deep .ngStyleBefore {
   background-color: rgba(0, 0, 0, 0);
-  transition: var(--shortTransition);
+  transition: var(--longTransition);
 
   // -webkit-box-shadow: 0px 10px 20px 20px rgba(255, 255, 255, 0.303);
   // -moz-box-shadow: 0px 10px 20px 20px rgba(255, 255, 255, 0.303);
   // box-shadow: 0px 10px 20px 20px rgba(255, 255, 255, 0.303);
+}
+
+.oneActive {
+  color: var(--accent);
+  transition: var(--shortTransition);
+}
+.twoActive {
+  color: var(--accent);
+  transition: var(--shortTransition);
+}
+.threeActive {
+  color: var(--accent);
+  transition: var(--shortTransition);
+}
+.fourActive {
+  color: var(--accent);
+  transition: var(--shortTransition);
 }

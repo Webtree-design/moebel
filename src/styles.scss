@@ -46,8 +46,9 @@ body {
 }
 body {
   margin: 0;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   color: var(--textcolor);
+  background-color: var(--toolbar);
 }
 
 :root {
@@ -65,6 +66,18 @@ body {
   --background: #202124;
   --toolbar: #303134;
   --textcolor: #dadce0;
+
+  --mdc-checkbox-selected-icon-color: #5e0308 !important;
+  --mdc-checkbox-selected-hover-icon-color: #5e0308 !important;
+  --mdc-checkbox-selected-focus-icon-color: #5e0308 !important;
+  --mat-option-selected-state-label-text-color: #5e0308 !important;
+  --mdc-checkbox-selected-pressed-icon-color: #5e0308 !important;
+  --mdc-checkbox-selected-focus-state-layer-color: #5e0308 !important;
+  --mdc-checkbox-selected-hover-state-layer-color: #5e0308 !important;
+  --mdc-checkbox-selected-pressed-state-layer-color: #5e0308 !important;
+}
+::ng-deep .mat-accent {
+  color: var(--accent) !important;
 }
 
 // start region scrollbar

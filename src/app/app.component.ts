@@ -1,4 +1,10 @@
-import { Component, ElementRef, HostListener, Inject } from '@angular/core';
+import {
+  Component,
+  ElementRef,
+  HostListener,
+  Inject,
+  ViewChild,
+} from '@angular/core';
 import { DataService } from './services/data.service';
 import { PopupComponent } from './components/dialogs/popup/popup.component';
 import { Dialog, DialogModule, DialogRef } from '@angular/cdk/dialog';
@@ -9,7 +15,7 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
   title = 'harley';
@@ -18,6 +24,10 @@ export class AppComponent {
   width: number = 0;
   public message: any = [];
   private isBrowser: any;
+  one: String = '';
+  two: String = '';
+  three: String = '';
+  four: String = '';
 
   constructor(
     public dataService: DataService,
@@ -33,10 +43,12 @@ export class AppComponent {
   onWindowScroll(event: any) {
     this.width = window.innerWidth;
     this.checkElementViewport();
+    this.checkElementViewportSections();
   }
   @HostListener('window:load', ['$event'])
   onLoad(event: any) {
     this.width = window.innerWidth;
+    this.checkElementViewportSections();
   }
 
   async ngOnInit() {
@@ -53,22 +65,20 @@ export class AppComponent {
   }
 
   public async getMessage() {
-    // this.dataService.getMessage().subscribe((res: any) => {
-    //   if (res.length <= 0 || res.length == undefined ) return;
-    //   res.forEach((el: any) => {
-    //     this.message.push(el);
-    //   });
-    //   this.openDialog();
-    // });
+    this.dataService.getMessage().subscribe((res: any) => {
+      if (res.length <= 0 || res.length == undefined) return;
+      res.forEach((el: any) => {
+        this.message.push(el);
+      });
+      this.openDialog();
+    });
   }
 
   private checkElementViewport() {
-    console.log('ckeckmate');
     const myElement =
       this.elementRef.nativeElement.querySelector('#routerOutlet');
 
     const bounding = myElement.getBoundingClientRect();
-    console.log(bounding.top);
     if (bounding.top < 0) {
       this.toolbarStyle = 'ngStyleAfter';
     } else {
@@ -79,18 +89,57 @@ export class AppComponent {
   scroll(el: HTMLElement) {
     if (this.isBrowser) {
       const elementTopPosition = el.getBoundingClientRect().top;
-      if (this.width >= 768) {
+      
         window.scrollTo({
-          top: window.pageYOffset + elementTopPosition - 80,
+          top: window.pageYOffset + elementTopPosition - 85,
           behavior: 'smooth',
         });
-      }
-      if (this.width < 768) {
-        window.scrollTo({
-          top: window.pageYOffset + elementTopPosition - 80,
-          behavior: 'smooth',
-        });
-      }
+      
+      
+    }
+  }
+
+  checkElementViewportSections() {
+    const section1 = this.elementRef.nativeElement
+      .querySelector('#section1')
+      .getBoundingClientRect();
+
+    const section2 = this.elementRef.nativeElement
+      .querySelector('#section2')
+      .getBoundingClientRect();
+
+    const section3 = this.elementRef.nativeElement
+      .querySelector('#section3')
+      .getBoundingClientRect();
+
+    const section4 = this.elementRef.nativeElement
+      .querySelector('#section4')
+      .getBoundingClientRect();
+
+      console.log('#######')
+      console.log(section1.top)
+      console.log(section1.bottom)
+      console.log(section2.top)
+      console.log(section2.bottom)
+    if (section1.top <= 0 && section1.bottom >= 90) {
+      this.one = 'oneActive';
+    } else {
+      this.one = '';
+    }
+    if (section2.top <= 90 && section2.bottom >= 90) {
+      this.two = 'twoActive';
+    } else {
+      this.two = '';
+    }
+    if (section3.top <= 90 && section3.bottom >= 90) {
+      this.three = 'threeActive';
+    } else {
+      this.three = '';
+    }
+    if (section4.top <= 90 && section4.bottom >= 90) {
+      this.four = 'fourActive';
+    } else {
+      this.four = '';
     }
   }
 }

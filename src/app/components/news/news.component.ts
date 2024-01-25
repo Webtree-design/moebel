@@ -20,7 +20,7 @@ export class NewsComponent {
     this.dataService.getNews().subscribe((res: any) => {
       if (res.length <= 0 || res.length == undefined) return;
       res.forEach((el: any) => {
-        this.news.push(el);
+        this.news.unshift(el);
       });
     });
   }

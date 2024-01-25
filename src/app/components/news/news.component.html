@@ -1,12 +1,15 @@
-<section class="px-6 py-12" style="background-color: var(--background)">
+<section
+  class="backgroundLayer px-6 py-12"
+  style="background-color: var(--background)"
+>
   <div
     class="items-center mx-auto max-w-screen-xl flex flex-col md:flex-row gap-x-12"
   >
-    <div class="basis-5/12 mr-auto mt-12 md:mt-0">
+    <div class="basis-5/12 mr-auto mt-0 mb-12 md:mb-0">
       <img
         class="w-6/6 rounded-lg"
         src="../../../assets/harley-davidson-BIufEmUshec-unsplash.jpg"
-        alt="Christian Wessel"
+        alt="Harley"
       />
     </div>
 
@@ -53,14 +56,15 @@
       <div class="flex flex-col md:flex-row">
         <div class="mb-6 w-auto basis-auto md:mb-0">
           <div
-            class="relative overflow-hidden rounded-l-lg bg-cover bg-no-repeat flex justify-center items-center"
+            class="h-[100%] relative overflow-hidden rounded-t-lg md:rounded-l-lg bg-cover bg-no-repeat flex justify-center items-center"
             data-te-ripple-init
             data-te-ripple-color="light"
           >
             <img
               src="{{ item.image }}"
-              class="h-auto w-[400px]"
+              class="w-[100%] md:w-[500px]"
               alt="selected image"
+              style="height: inherit; object-fit: cover"
             />
           </div>
         </div>

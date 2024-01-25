@@ -10,7 +10,7 @@
     class="w-[320px] h-screen"
     mode="over"
     position="end"
-    style="position: fixed;background-color: var(--toolbar)"
+    style="position: fixed; background-color: var(--toolbar)"
   >
     <div class="py-1 flex justify-center">
       <button
@@ -60,7 +60,6 @@
   <div
     #toolbarPC
     [ngClass]="toolbarStyle"
-    
     class="hidden fixed md:flex w-[100%] h-[90px]"
     style="z-index: 100"
   >
@@ -73,16 +72,24 @@
 
       <ul class="toolbar-ul gap-x-12 flex flex-row items-center justify-center">
         <li>
-          <a (click)="scroll(section1)" class="block rounded">Start</a>
+          <a [ngClass]="one" (click)="scroll(section1)" class="block rounded"
+            >Start</a
+          >
         </li>
         <li>
-          <a (click)="scroll(section2)" class="block rounded">Über uns</a>
+          <a [ngClass]="two" (click)="scroll(section2)" class="block rounded"
+            >Über uns</a
+          >
         </li>
         <li>
-          <a (click)="scroll(section3)" class="block rounded">Katalog</a>
+          <a [ngClass]="three" (click)="scroll(section3)" class="block rounded"
+            >Katalog</a
+          >
         </li>
         <li>
-          <a (click)="scroll(section4)" class="block rounded">Kontakt</a>
+          <a [ngClass]="four" (click)="scroll(section4)" class="block rounded"
+            >Kontakt</a
+          >
         </li>
       </ul>
     </div>
@@ -90,8 +97,7 @@
 
   <div
     #toolbarMobile
-    ngClass="toolbarStyle"
-    
+    [ngClass]="toolbarStyle"
     class="fixed flex justify-between items-center md:hidden w-[100%] h-[90px] px-6"
     style="z-index: 100"
   >
@@ -112,28 +118,28 @@
     </button>
   </div>
 
-  <div #routerOutlet id="routerOutlet"  class="router-outlet">
-    <div #section1>
+  <div #routerOutlet id="routerOutlet" class="router-outlet">
+    <div #section1 id="section1">
       <app-start></app-start>
     </div>
-    <div #section2>
+    <div #section2 id="section2">
       <app-ueberuns></app-ueberuns>
+      <div class="banner"></div>
     </div>
-    <div class="banner"></div>
-    <div #section3>
+    <div #section3 id="section3">
       <app-news></app-news>
     </div>
-    <div #section4>
+    <div #section4 id="section4">
       <app-kontakt></app-kontakt>
+      <app-expander></app-expander>
     </div>
   </div>
 
   <footer
-    class="p-4 rounded-lg shadow md:flex md:items-center md:justify-between md:p-6 flex flex-col" style="background-color: var(--toolbar);"
+    class="p-4 md:flex md:items-center md:justify-between md:p-6 flex flex-col"
+    style="background-color: var(--toolbar)"
   >
-    <div
-      class="mb-6 contentblock-one container mx-auto flex flex-col text-center items-center"
-    >
+    <div class="mb-6 mx-auto flex flex-col text-center items-center">
       <a href="mailto: info@eb-energiekonzepte.de">{{ firmenmail }}</a>
     </div>
 
