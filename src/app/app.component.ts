@@ -11,6 +11,7 @@ import { Dialog, DialogModule, DialogRef } from '@angular/cdk/dialog';
 import { PLATFORM_ID } from '@angular/core';
 import { isPlatformBrowser } from '@angular/common';
 import { Router } from '@angular/router';
+import { MatSnackBar, MatSnackBarConfig } from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-root',
@@ -34,7 +35,8 @@ export class AppComponent {
     public dialog: Dialog,
     @Inject(PLATFORM_ID) platformId: string,
     private router: Router,
-    private elementRef: ElementRef
+    private elementRef: ElementRef,
+    public snackBar: MatSnackBar
   ) {
     this.isBrowser = isPlatformBrowser(platformId);
   }
@@ -54,15 +56,21 @@ export class AppComponent {
   async ngOnInit() {
     await this.getMessage();
     this.message = [];
+   
   }
 
-  public openDialog() {
+  openSnackBar(message: string, action: string) {
     if (this.message[0].active != '1') return;
-    this.dialog.open(PopupComponent, {
-      data: this.message[0],
-      panelClass: 'your-dialog-class',
-    });
+    this.snackBar.open(message, action);
   }
+
+  // public openDialog() {
+  //   if (this.message[0].active != '1') return;
+  //   this.dialog.open(PopupComponent, {
+  //     data: this.message[0],
+  //     panelClass: 'your-dialog-class',
+  //   });
+  // }
 
   public async getMessage() {
     this.dataService.getMessage().subscribe((res: any) => {
@@ -70,7 +78,8 @@ export class AppComponent {
       res.forEach((el: any) => {
         this.message.push(el);
       });
-      this.openDialog();
+      // this.openDialog();
+      this.openSnackBar(this.message[0].title, 'OK!')
     });
   }
 

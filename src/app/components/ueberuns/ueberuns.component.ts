@@ -4,7 +4,7 @@ import { Component, Inject, PLATFORM_ID } from '@angular/core';
 @Component({
   selector: 'app-ueberuns',
   templateUrl: './ueberuns.component.html',
-  styleUrls: ['./ueberuns.component.scss']
+  styleUrls: ['./ueberuns.component.scss'],
 })
 export class UeberunsComponent {
   private isBrowser: any;
@@ -16,7 +16,7 @@ export class UeberunsComponent {
       const elementTopPosition = el.getBoundingClientRect().bottom;
 
       window.scrollTo({
-        top: window.pageYOffset + elementTopPosition - 90,
+        top: window.pageYOffset + elementTopPosition + 105,
         behavior: 'smooth',
       });
     }

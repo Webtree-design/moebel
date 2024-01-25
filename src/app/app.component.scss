@@ -8,9 +8,10 @@
       transition: 0.1s;
       font-weight: 800;
       transition: var(--shortTransition);
+      color: var(--textcolor);
     }
     a:hover {
-      color: var(--accent);
+      transform: scale(1.2);
       transition: var(--shortTransition);
     }
   }
@@ -61,18 +62,40 @@
 }
 
 .oneActive {
-  color: var(--accent);
+  color: var(--accent) !important;
   transition: var(--shortTransition);
 }
 .twoActive {
-  color: var(--accent);
+  color: var(--accent) !important;
   transition: var(--shortTransition);
 }
 .threeActive {
-  color: var(--accent);
+  color: var(--accent) !important;
   transition: var(--shortTransition);
 }
 .fourActive {
-  color: var(--accent);
+  color: var(--accent) !important;
   transition: var(--shortTransition);
+}
+
+::ng-deep mat-snack-bar-container {
+  margin: 0px !important;
+}
+
+::ng-deep .mdc-snackbar__surface {
+  border-radius: 0.5rem 0.5rem 0 0 !important;
+  width: 100vw !important;
+  .mdc-button__label {
+    color: var(--textcolor);
+  }
+}
+
+::ng-deep .mat-mdc-snack-bar-container .mdc-snackbar__surface {
+  max-width: 1280px !important;
+}
+
+::ng-deep .mat-mdc-snack-bar-container {
+  --mdc-snackbar-container-color: var(--toolbar) !important;
+  --mdc-snackbar-supporting-text-color: var(--textcolor) !important;
+  --mat-snack-bar-button-color: var(--accent) !important;
 }

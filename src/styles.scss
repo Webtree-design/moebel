@@ -66,7 +66,9 @@ body {
   --background: #202124;
   --toolbar: #303134;
   --textcolor: #dadce0;
+}
 
+::ng-deep {
   --mdc-checkbox-selected-icon-color: #5e0308 !important;
   --mdc-checkbox-selected-hover-icon-color: #5e0308 !important;
   --mdc-checkbox-selected-focus-icon-color: #5e0308 !important;
@@ -75,6 +77,7 @@ body {
   --mdc-checkbox-selected-focus-state-layer-color: #5e0308 !important;
   --mdc-checkbox-selected-hover-state-layer-color: #5e0308 !important;
   --mdc-checkbox-selected-pressed-state-layer-color: #5e0308 !important;
+  --mat-snack-bar-button-color: #5e0308 !important;
 }
 ::ng-deep .mat-accent {
   color: var(--accent) !important;
