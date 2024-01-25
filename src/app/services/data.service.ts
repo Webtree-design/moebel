@@ -24,14 +24,12 @@ export class DataService {
 
   public getNews() {
     const user = env.user;
-    console.log(user);
     return this.http.post<any>(`${env.apiURL}/newsOpen/get`, {user}, {
       headers: this.headers,
     });
   }
   public getMessage() {
     const user = env.user;
-    console.log(user);
     return this.http.post<any>(`${env.apiURL}/messageOpen/get`, {user}, {
       headers: this.headers,
     });

@@ -19,7 +19,7 @@ import { MatSnackBar, MatSnackBarConfig } from '@angular/material/snack-bar';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  title = 'harley';
+  title = 'webtreedesign';
   public toolbarStyle: any = 'ngStyleBefore';
   firmenmail = 'mail.de';
   width: number = 0;
@@ -125,11 +125,7 @@ export class AppComponent {
       .querySelector('#section4')
       .getBoundingClientRect();
 
-      console.log('#######')
-      console.log(section1.top)
-      console.log(section1.bottom)
-      console.log(section2.top)
-      console.log(section2.bottom)
+     
     if (section1.top <= 0 && section1.bottom >= 90) {
       this.one = 'oneActive';
     } else {

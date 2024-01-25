@@ -1,5 +1,5 @@
 {
-  "name": "harley",
+  "name": "webtreedesign",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
@@ -7,10 +7,10 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "dev:ssr": "ng run harley:serve-ssr",
-    "serve:ssr": "node dist/harley/server/main.js",
-    "build:ssr": "ng build && ng run harley:server",
-    "prerender": "ng run harley:prerender"
+    "dev:ssr": "ng run webtreedesign:serve-ssr",
+    "serve:ssr": "node dist/webtreedesign/server/main.js",
+    "build:ssr": "ng build && ng run webtreedesign:server",
+    "prerender": "ng run webtreedesign:prerender"
   },
   "private": true,
   "dependencies": {

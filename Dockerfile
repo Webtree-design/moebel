@@ -5,6 +5,6 @@ COPY package.json .
 RUN npm install
 #RUN npm run build:ssr #run manually  
 COPY . .
-EXPOSE 4002
+EXPOSE 4003
 
-CMD ["node", "dist/harley/server/main.js"]
+CMD ["node", "dist/webtreedesign/server/main.js"]

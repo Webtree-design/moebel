@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "harley": {
+    "webtreedesign": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/harley/browser",
+            "outputPath": "dist/webtreedesign/browser",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": [
@@ -65,10 +65,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "harley:build:production"
+              "browserTarget": "webtreedesign:build:production"
             },
             "development": {
-              "browserTarget": "harley:build:development"
+              "browserTarget": "webtreedesign:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -76,7 +76,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "harley:build"
+            "browserTarget": "webtreedesign:build"
           }
         },
         "test": {
@@ -101,7 +101,7 @@
         "server": {
           "builder": "@angular-devkit/build-angular:server",
           "options": {
-            "outputPath": "dist/harley/server",
+            "outputPath": "dist/webtreedesign/server",
             "main": "server.ts",
             "tsConfig": "tsconfig.server.json",
             "inlineStyleLanguage": "scss"
@@ -124,12 +124,12 @@
           "builder": "@nguniversal/builders:ssr-dev-server",
           "configurations": {
             "development": {
-              "browserTarget": "harley:build:development",
-              "serverTarget": "harley:server:development"
+              "browserTarget": "webtreedesign:build:development",
+              "serverTarget": "webtreedesign:server:development"
             },
             "production": {
-              "browserTarget": "harley:build:production",
-              "serverTarget": "harley:server:production"
+              "browserTarget": "webtreedesign:build:production",
+              "serverTarget": "webtreedesign:server:production"
             }
           },
           "defaultConfiguration": "development"
@@ -143,12 +143,12 @@
           },
           "configurations": {
             "production": {
-              "browserTarget": "harley:build:production",
-              "serverTarget": "harley:server:production"
+              "browserTarget": "webtreedesign:build:production",
+              "serverTarget": "webtreedesign:server:production"
             },
             "development": {
-              "browserTarget": "harley:build:development",
-              "serverTarget": "harley:server:development"
+              "browserTarget": "webtreedesign:build:development",
+              "serverTarget": "webtreedesign:server:development"
             }
           },
           "defaultConfiguration": "production"

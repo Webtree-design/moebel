@@ -11,20 +11,20 @@
 // Define the palettes for your theme using the Material Design palettes available in palette.scss
 // (imported above). For each palette, you can optionally specify a default, lighter, and darker
 // hue. Available color palettes: https://material.io/design/color/
-$harley-primary: mat.define-palette(mat.$indigo-palette);
-$harley-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
+$webtreedesign-primary: mat.define-palette(mat.$indigo-palette);
+$webtreedesign-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
 
 // The warn palette is optional (defaults to red).
-$harley-warn: mat.define-palette(mat.$red-palette);
+$webtreedesign-warn: mat.define-palette(mat.$red-palette);
 
 // Create the theme object. A theme consists of configurations for individual
 // theming systems such as "color" or "typography".
-$harley-theme: mat.define-light-theme(
+$webtreedesign-theme: mat.define-light-theme(
   (
     color: (
-      primary: $harley-primary,
-      accent: $harley-accent,
-      warn: $harley-warn,
+      primary: $webtreedesign-primary,
+      accent: $webtreedesign-accent,
+      warn: $webtreedesign-warn,
     ),
   )
 );
@@ -32,7 +32,7 @@ $harley-theme: mat.define-light-theme(
 // Include theme styles for core and each component used in your app.
 // Alternatively, you can import and @include the theme mixins for each component
 // that you are using.
-@include mat.all-component-themes($harley-theme);
+@include mat.all-component-themes($webtreedesign-theme);
 
 @tailwind base;
 @tailwind components;
@@ -46,9 +46,14 @@ body {
 }
 body {
   margin: 0;
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-family: "Forum", sans-serif;
   color: var(--textcolor);
   background-color: var(--toolbar);
+}
+@font-face {
+  font-family: "Forum";
+  src: url("./assets/webtree/Forum-Regular.ttf") format("truetype");
+  font-weight: bold;
 }
 
 :root {
@@ -57,27 +62,27 @@ body {
 
   // --accent: #9AC0D4;
   // --second: #28408b;
-  --accent: #5e0308;
-  --second: #7a5948;
+  --accent: #236d55;
+  --second: #1a4954;
 
-  --accent-X: #5e030890;
-  --second-X: #7a594890;
+  --accent-X: #236d5590;
+  --second-X: #1a495490;
 
-  --background: #202124;
-  --toolbar: #303134;
-  --textcolor: #dadce0;
+  --background: #939496;
+  --toolbar: #cbcbcb;
+  --textcolor: #212121;
 }
 
 ::ng-deep {
-  --mdc-checkbox-selected-icon-color: #5e0308 !important;
-  --mdc-checkbox-selected-hover-icon-color: #5e0308 !important;
-  --mdc-checkbox-selected-focus-icon-color: #5e0308 !important;
-  --mat-option-selected-state-label-text-color: #5e0308 !important;
-  --mdc-checkbox-selected-pressed-icon-color: #5e0308 !important;
-  --mdc-checkbox-selected-focus-state-layer-color: #5e0308 !important;
-  --mdc-checkbox-selected-hover-state-layer-color: #5e0308 !important;
-  --mdc-checkbox-selected-pressed-state-layer-color: #5e0308 !important;
-  --mat-snack-bar-button-color: #5e0308 !important;
+  --mdc-checkbox-selected-icon-color: #236d55 !important;
+  --mdc-checkbox-selected-hover-icon-color: #236d55 !important;
+  --mdc-checkbox-selected-focus-icon-color: #236d55 !important;
+  --mat-option-selected-state-label-text-color: #236d55 !important;
+  --mdc-checkbox-selected-pressed-icon-color: #236d55 !important;
+  --mdc-checkbox-selected-focus-state-layer-color: #236d55 !important;
+  --mdc-checkbox-selected-hover-state-layer-color: #236d55 !important;
+  --mdc-checkbox-selected-pressed-state-layer-color: #236d55 !important;
+  --mat-snack-bar-button-color: #236d55 !important;
 }
 ::ng-deep .mat-accent {
   color: var(--accent) !important;
