@@ -27,9 +27,19 @@
   opacity: 0.8;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  background-size: cover;
 }
 
-* {
-  color: var(--textcolor);
+::ng-deep .ngStyleAfter {
+  background-color: var(--toolbar);
+  transition: var(--shortTransition);
+  box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+}
+
+::ng-deep .ngStyleBefore {
+  background-color: rgba(0, 0, 0, 0);
+  transition: var(--shortTransition);
+
+  // -webkit-box-shadow: 0px 10px 20px 20px rgba(255, 255, 255, 0.303);
+  // -moz-box-shadow: 0px 10px 20px 20px rgba(255, 255, 255, 0.303);
+  // box-shadow: 0px 10px 20px 20px rgba(255, 255, 255, 0.303);
 }

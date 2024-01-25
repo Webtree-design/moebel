@@ -59,7 +59,8 @@
 
   <div
     #toolbarPC
-    [@toolbar]="toolbarState"
+    [ngClass]="toolbarStyle"
+    
     class="hidden fixed md:flex w-[100%] h-[90px]"
     style="z-index: 100"
   >
@@ -89,7 +90,8 @@
 
   <div
     #toolbarMobile
-    [@toolbar]="toolbarState"
+    ngClass="toolbarStyle"
+    
     class="fixed flex justify-between items-center md:hidden w-[100%] h-[90px] px-6"
     style="z-index: 100"
   >
@@ -110,7 +112,7 @@
     </button>
   </div>
 
-  <div #routerOutlet class="router-outlet">
+  <div #routerOutlet id="routerOutlet"  class="router-outlet">
     <div #section1>
       <app-start></app-start>
     </div>
