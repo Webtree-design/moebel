@@ -171,8 +171,9 @@
     transition: var(--shortTransition);
   }
 }
-.naviagtion {
+::ng-deep .naviagtion {
   button {
+    fill: var(--accent) !important;
     transition: var(--shortTransition);
   }
 }

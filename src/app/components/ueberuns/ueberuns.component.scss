@@ -21,10 +21,6 @@
   text-align: center;
 }
 
-::ng-deep svg {
-  fill: var(--textcolor) !important;
-}
-
 * {
   color: var(--textcolor);
 }

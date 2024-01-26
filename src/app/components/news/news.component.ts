@@ -26,14 +26,14 @@ export class NewsComponent {
   }
   public formattedDateString(dateString: any) {
     const date = new Date(dateString);
-
+  
     const options: Intl.DateTimeFormatOptions = {
       day: '2-digit',
       month: '2-digit',
       year: 'numeric',
     };
-
-    const formattedDate = date.toLocaleDateString('en-US', options);
+  
+    const formattedDate = date.toLocaleDateString('de-DE', options);
     return formattedDate;
   }
 }

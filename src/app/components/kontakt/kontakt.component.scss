@@ -70,4 +70,6 @@
   border-color: var(--textcolor) !important;
 }
 
-
+::ng-deep .contact-svg {
+  fill: var(--accent);
+}
