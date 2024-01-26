@@ -30,6 +30,7 @@ export class AppComponent {
   three: String = '';
   four: String = '';
   five: String = '';
+  currentRoute:any = true
 
   constructor(
     public dataService: DataService,
@@ -57,7 +58,6 @@ export class AppComponent {
   async ngOnInit() {
     await this.getMessage();
     this.message = [];
-   
   }
 
   openSnackBar(message: string, action: string) {
@@ -80,7 +80,7 @@ export class AppComponent {
         this.message.push(el);
       });
       // this.openDialog();
-      this.openSnackBar(this.message[0].title, 'OK!')
+      this.openSnackBar(this.message[0].title, 'OK!');
     });
   }
 
@@ -89,7 +89,7 @@ export class AppComponent {
       this.elementRef.nativeElement.querySelector('#routerOutlet');
 
     const bounding = myElement.getBoundingClientRect();
-    console.log(bounding.top)
+    // console.log(bounding.top);
     if (bounding.top < 0) {
       this.toolbarStyle = 'ngStyleAfter';
     } else {
@@ -100,13 +100,11 @@ export class AppComponent {
   scroll(el: HTMLElement) {
     if (this.isBrowser) {
       const elementTopPosition = el.getBoundingClientRect().top;
-      
-        window.scrollTo({
-          top: window.pageYOffset + elementTopPosition - 85,
-          behavior: 'smooth',
-        });
-      
-      
+
+      window.scrollTo({
+        top: window.pageYOffset + elementTopPosition - 85,
+        behavior: 'smooth',
+      });
     }
   }
 
@@ -126,12 +124,11 @@ export class AppComponent {
     const section4 = this.elementRef.nativeElement
       .querySelector('#section4')
       .getBoundingClientRect();
-      
+
     const section5 = this.elementRef.nativeElement
       .querySelector('#section5')
       .getBoundingClientRect();
 
-     
     if (section1.top <= 0 && section1.bottom >= 90) {
       this.one = 'oneActive';
     } else {

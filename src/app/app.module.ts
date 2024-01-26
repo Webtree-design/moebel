@@ -32,6 +32,8 @@ import { KontaktComponent } from './components/kontakt/kontakt.component';
 import { ExpanderComponent } from './components/expander/expander.component';
 import { CaruselComponent } from './components/dialogs/carusel/carusel.component';
 import { InformationComponent } from './components/information/information.component';
+import { ImpressumComponent } from './components/impressum/impressum.component';
+import { DatenschutzComponent } from './components/datenschutz/datenschutz.component';
 
 
 @NgModule({
@@ -44,7 +46,9 @@ import { InformationComponent } from './components/information/information.compo
     KontaktComponent,
     ExpanderComponent,
     CaruselComponent,
-    InformationComponent
+    InformationComponent,
+    ImpressumComponent,
+    DatenschutzComponent
   ],
   imports: [
     BrowserModule, //.withServerTransition({ appId: 'serverApp' }),

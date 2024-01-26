@@ -1,17 +1,15 @@
-import { Component,ViewChild } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import { env } from 'src/env';
 
-
 import { MatSnackBar, MatSnackBarConfig } from '@angular/material/snack-bar';
-
-// import { ContactService } from '../../services/contact.service';
+import { KontaktService } from 'src/app/services/kontakt.service';
 import { NgForm } from '@angular/forms';
 import { FormBuilder, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-kontakt',
   templateUrl: './kontakt.component.html',
-  styleUrls: ['./kontakt.component.scss']
+  styleUrls: ['./kontakt.component.scss'],
 })
 export class KontaktComponent {
   public form: any = {
@@ -21,16 +19,17 @@ export class KontaktComponent {
     eMessage: '',
     eCheckbox: false,
   };
+  isDisabled: any = 'disbaledButton';
   constructor(
     public snackBar: MatSnackBar,
-    // public contactService: ContactService,
+    public kontactService: KontaktService,
     private formBuilder: FormBuilder
   ) {}
   nineFormGroup = this.formBuilder.group({
-    eName: ['', [Validators.required, Validators.minLength(1)]],
+    eName: ['', Validators.required],
     eEmail: ['', [Validators.required, Validators.email]],
-    eBetreff: ['', [Validators.required, Validators.minLength(1)]],
-    eMessage: ['', [Validators.required, Validators.minLength(1)]],
+    eBetreff: ['', Validators.required],
+    eMessage: ['', Validators.required],
     eCheckbox: [false, Validators.required],
   });
   ngOnInit() {}
@@ -50,7 +49,7 @@ export class KontaktComponent {
     const nineOptionBetreff = this.nineFormGroup.get('eBetreff')!.value;
     const nineOptionMsg = this.nineFormGroup.get('eMessage')!.value;
 
-    const form = {
+    const form:any = {
       eName: nineOptionName,
       eEmail: nineOptionMail,
       eMessage: nineOptionMsg,
@@ -61,16 +60,16 @@ export class KontaktComponent {
     };
     // console.log(form);
 
-    // this.contactService.createEmail(form).subscribe((res) => {
-    //   this.form = this.formBuilder.group({
-    //     eName: ['', Validators.required], // Default value for Name field
-    //     eEmail: ['', [Validators.required, Validators.email]], // Default value for Email field
-    //     eBetreff: ['', Validators.required], // Default value for Betreff field
-    //     eMessage: ['', Validators.required], // Default value for Nachricht field
-    //     eCheckbox: [false, Validators.requiredTrue], // Default value for Checkbox field
-    //   });
+    this.kontactService.createEmail(form).subscribe((res) => {
+      this.form = this.formBuilder.group({
+        eName: ['', Validators.required], // Default value for Name field
+        eEmail: ['', [Validators.required, Validators.email]], // Default value for Email field
+        eBetreff: ['', Validators.required], // Default value for Betreff field
+        eMessage: ['', Validators.required], // Default value for Nachricht field
+        eCheckbox: [false, Validators.requiredTrue], // Default value for Checkbox field
+      });
     this.openSnackBar('Email gesendet');
-    // });
+    });
   }
 }
 

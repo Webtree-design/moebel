@@ -40,6 +40,12 @@
       <mat-divider></mat-divider>
       <li class="my-[8px]">
         <a (click)="scroll(section4); drawer.close()" class="block rounded"
+          >News
+        </a>
+      </li>
+      <mat-divider></mat-divider>
+      <li class="my-[8px]">
+        <a (click)="scroll(section5); drawer.close()" class="block rounded"
           >Kontakt
         </a>
       </li>
@@ -120,7 +126,12 @@
     </button>
   </div>
 
-  <div #routerOutlet id="routerOutlet" class="router-outlet">
+  <div
+    [ngClass]="currentRoute ? 'impressum' : 'impressum'"
+    #routerOutlet
+    id="routerOutlet"
+    class="router-outlet"
+  >
     <div #section1 id="section1">
       <app-start></app-start>
     </div>
@@ -144,24 +155,15 @@
     class="p-4 md:flex md:items-center md:justify-between md:p-6 flex flex-col"
     style="background-color: var(--toolbar); color: var(--textcolor)"
   >
-    <div class="mb-6 mx-auto flex flex-col text-center items-center">
-      <a href="mailto: info@eb-energiekonzepte.de">{{ firmenmail }}</a>
-    </div>
-
     <div class="notranslate mx-auto flex flex-col text-center items-center">
       <span class="text-sm">
         <!-- clickscroll -->
-        <p class="hover:underline">Webtree-Design</p>
+        <p (click)="scroll(section1)" class="hover:underline">Webtree-Design</p>
       </span>
       <br />
       <ul
         class="container mx-auto flex flex-col md:flex-row text-center items-center gap-2 md:gap-6"
       >
-        <li>
-          <!-- clickscroll -->
-          <a class="text-sm hover:underline text-center">Kontakt</a>
-        </li>
-
         <li>
           <a routerLink="/impressum" class="text-sm hover:underline"
             >Impressum</a

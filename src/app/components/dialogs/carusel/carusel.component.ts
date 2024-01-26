@@ -80,7 +80,7 @@ export class CaruselComponent {
   ];
 
   imageSliderClick(event: any) {
-    console.log(event);
+    // console.log(event);
     switch (event) {
       case 0:
         break;
