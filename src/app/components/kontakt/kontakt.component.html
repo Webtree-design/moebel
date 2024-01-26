@@ -1,8 +1,10 @@
 <section
-  class="backgroundLayer mx-auto max-w-screen-xl px-6 py-12 pb-6"
-  style="background-color: var(--background)"
+  class="backgroundLayer px-6 py-12 pb-6"
+  style="background-color: var(--toolbar)"
 >
-  <div class="items-center flex flex-col md:flex-row gap-x-12">
+  <div
+    class="items-center mx-auto max-w-screen-xl flex flex-col md:flex-row gap-x-12"
+  >
     <div class="font-light sm:text-lg mb-auto basis-7/12">
       <h1 class="text-3xl font-bold mb-6">Kontaktieren Sie uns</h1>
       <p>
@@ -25,7 +27,7 @@
     <div class="gap-4 basis-5/12">
       <mat-stepper [linear]="true" #stepper>
         <mat-step [stepControl]="nineFormGroup">
-          <form [formGroup]="nineFormGroup" class="flex justify-center">
+          <form [formGroup]="nineFormGroup" class="flex justify-end">
             <div class="flex justify-center items-center flex-col">
               <mat-form-field>
                 <input

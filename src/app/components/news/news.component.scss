@@ -1,11 +1,20 @@
 .backgroundLayer {
-    background-image: url(../../../assets/USA500/staaten_hell.png);;
-    background-size: 100vh;
-    background-repeat: no-repeat;
-    background-position: right;
-     
-  }
+  // background-image: url(../../../assets/webtree/);
+  background-size: 100vh;
+  background-repeat: no-repeat;
+  background-position: right;
+}
 
-  *{
-    color: var(--textcolor);
-  }
+* {
+  color: var(--textcolor);
+}
+
+.news:hover {
+  // box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  transition: var(--longTransition);
+  cursor: default;
+}
+
+.news {
+  transition: var(--longTransition);
+}

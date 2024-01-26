@@ -88,6 +88,11 @@
         </li>
         <li>
           <a [ngClass]="four" (click)="scroll(section4)" class="block rounded"
+            >News</a
+          >
+        </li>
+        <li>
+          <a [ngClass]="five" (click)="scroll(section5)" class="block rounded"
             >Kontakt</a
           >
         </li>
@@ -124,12 +129,15 @@
     </div>
     <div #section2 id="section2">
       <app-ueberuns></app-ueberuns>
-      <div class="banner"></div>
     </div>
     <div #section3 id="section3">
-      <app-news></app-news>
+      <app-information></app-information>
+      <div class="banner"></div>
     </div>
     <div #section4 id="section4">
+      <app-news></app-news>
+    </div>
+    <div #section5 id="section5">
       <app-kontakt></app-kontakt>
       <app-expander></app-expander>
     </div>

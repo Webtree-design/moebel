@@ -1,0 +1,178 @@
+// //SLIDER
+// ::ng-deep
+//   .ng-image-slider
+//   .ng-image-slider-container
+//   .main
+//   .main-inner
+//   .img-div {
+//   box-shadow: none !important;
+//   cursor: pointer;
+
+//   ::ng-deep .caption {
+//     display: flex;
+//     justify-items: center;
+//     justify-content: center;
+//     text-align: center;
+
+//     white-space: nowrap;
+//     opacity: 0;
+//     transform: translate(0, 105px);
+//     font-weight: 700 !important;
+//     color: var(--accent) !important;
+//     transition: var(--longTransition);
+//     background-image: none !important;
+//     border-radius: 5px !important;
+//   }
+
+//   transition: var(--longTransition);
+//   ::ng-deep :hover + .caption {
+//     display: flex;
+//     justify-items: center;
+//     justify-content: center;
+//     text-align: center;
+
+//     white-space: nowrap;
+//     opacity: 1;
+//     transition: var(--longTransition);
+//   }
+// }
+
+// ::ng-deep
+//   .ng-image-slider
+//   .ng-image-slider-container
+//   .main
+//   .main-inner
+//   .img-div
+//   img {
+//   height: 150px !important;
+//   width: 150px !important;
+//   border: 1px solid var(--accent) !important;
+//   padding: 30px !important;
+//   border-radius: 100px !important;
+// }
+
+// ::ng-deep .ng-image-slider .ng-image-slider-container .main {
+//   padding-top: 120px !important;
+//   padding-bottom: 140px !important;
+//   padding-left: 20px !important;
+//   padding-right: 20px !important;
+// }
+
+// ::ng-deep .ng-image-slider .ng-image-slider-container .main .prev {
+//   z-index: 0 !important;
+//   opacity: 0.2;
+// }
+// ::ng-deep .ng-image-slider .ng-image-slider-container .main .next {
+//   z-index: 0 !important;
+//   opacity: 0.2;
+// }
+
+// .ng-gallery {
+//   background-color: rgba(247, 247, 247, 0) !important;
+//   height: 100% !important;
+// }
+
+::ng-deep
+  .ng-image-slider
+  .ng-image-slider-container
+  .main
+  .main-inner
+  .img-div {
+  box-shadow: none !important;
+  border-radius: none !important;
+  // border: inset 32px rgba(0, 128, 0, 0);
+}
+::ng-deep
+  .ng-image-slider
+  .ng-image-slider-container
+  .main
+  .main-inner
+  .img-div
+  .caption {
+  box-shadow: none !important;
+  border-radius: none !important;
+  background-image: none !important;
+  text-align: left !important;
+  display: none !important;
+}
+
+@media only screen and (min-width: 1024px) {
+  ::ng-deep
+    .ng-image-slider
+    .ng-image-slider-container
+    .main
+    .main-inner
+    .img-div
+    img {
+    padding: 16px !important;
+    border-radius: none !important;
+    object-fit: contain !important;
+    transition: var(--shortTransition);
+    backface-visibility: hidden;
+    -webkit-font-smoothing: subpixel-antialiased;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  ::ng-deep
+    .ng-image-slider
+    .ng-image-slider-container
+    .main
+    .main-inner
+    .img-div
+    img {
+    // padding: 0px !important;
+    border-radius: none !important;
+    object-fit: cover !important;
+    transition: var(--shortTransition);
+    backface-visibility: hidden;
+    -webkit-font-smoothing: subpixel-antialiased;
+  }
+}
+
+::ng-deep
+  .ng-image-slider
+  .ng-image-slider-container
+  .main
+  .main-inner
+  .img-div
+  img:hover {
+  backface-visibility: hidden;
+  -webkit-font-smoothing: subpixel-antialiased;
+  // transform: translateZ(10%);
+  transform: scale(105%) perspective(10px);
+  transition: var(--shortTransition);
+  will-change: transform;
+  cursor: pointer;
+}
+
+::ng-deep .ng-image-slider .ng-image-slider-container .main .prev {
+  background-color: var(--background-X) !important;
+}
+::ng-deep .ng-image-slider .ng-image-slider-container .main .next {
+  background-color: var(--background-X) !important;
+}
+// https://www.pinterest.de/pin/593912269633395587/
+// https://www.pinterest.de/pin/50172983341925262/
+
+::ng-deep
+  .ng-image-slider
+  .ng-image-slider-container
+  .main
+  .main-inner
+  .img-div
+  img,
+.ng-image-slider .ng-image-slider-container .main .main-inner .img-div video {
+  border-radius: 0 !important;
+}
+
+.naviagtion {
+  button:active {
+    opacity: 0.4;
+    transition: var(--shortTransition);
+  }
+}
+.naviagtion {
+  button {
+    transition: var(--shortTransition);
+  }
+}

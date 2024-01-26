@@ -47,7 +47,7 @@ body {
 body {
   margin: 0;
   font-family: "Forum", sans-serif;
-  color: var(--textcolor);
+  // color: var(--textcolor);
   background-color: var(--toolbar);
 }
 @font-face {
@@ -68,9 +68,13 @@ body {
   --accent-X: #236d5590;
   --second-X: #1a495490;
 
-  --background: #939496;
-  --toolbar: #cbcbcb;
+  --background: #f5f3ef;
+  --toolbar: #f3f0eb;
   --textcolor: #212121;
+
+
+
+  --background-X: #9394964b;
 }
 
 ::ng-deep {

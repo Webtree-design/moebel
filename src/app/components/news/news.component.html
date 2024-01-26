@@ -1,48 +1,10 @@
-<section
-  class="backgroundLayer px-6 py-12"
-  style="background-color: var(--background)"
->
-  <div
-    class="items-center mx-auto max-w-screen-xl flex flex-col md:flex-row gap-x-12"
-  >
-    <div class="basis-5/12 mr-auto mt-0 mb-12 md:mb-0">
-      <img
-        class="w-6/6 rounded-lg"
-        src="../../../assets/harley-davidson-BIufEmUshec-unsplash.jpg"
-        alt="webtreedesign"
-      />
-    </div>
-
-    <div class="basis-7/12 font-light sm:text-lg shrink-0">
-      <h2 class="mb-4 text-4xl tracking-tight font-extrabold">
-        Unsere webtreedesigns: Mehr als nur Metall und Motoren!
-      </h2>
-      <p class="mb-4">
-        Willkommen in der Welt der webtreedesign-Davidson-Motorräder! Unsere
-        Ausstellung präsentiert eine beeindruckende Palette von webtreedesigns, die von
-        der Historie und Markenidentität der Marke geprägt sind. Schau dich um,
-        denn hier geht es nicht nur um Metall und Motoren, sondern um das pure
-        Vergnügen des Biken.
-      </p>
-      <p>
-        Aber das ist noch nicht alles. In unserer Ausstellung erlebst du nicht
-        nur die Maschinen, wie sie aus der Fabrik kommen. Hier siehst du auch,
-        was möglich ist, wenn es um Customizing geht. Freiheit zur
-        Individualisierung ist bei webtreedesign-Davidson nicht nur ein Slogan - es ist
-        ein Lebensstil.
-      </p>
-      <p>
-        Schau vorbei und erlebe die rohe, authentische Welt der webtreedesigns. Hier
-        gibt es keine schicken Worte, nur Maschinen, die darauf warten, die
-        Straße zu erobern.
-      </p>
-    </div>
-  </div>
+<section class="mx-auto max-w-screen-xl px-6 pt-12">
+  <h2 class="text-right text-4xl font-bold">NEWS</h2>
 </section>
 
 <section
   class="team px-6 py-12 flex flex-col gap-6"
-  style="background-color: var(--toolbar)"
+  style="background-color: var(--background)"
 >
   <div
     *ngFor="let item of news"
@@ -50,13 +12,13 @@
   >
     <!-- Section: Design Block -->
     <section
-      class="text-center md:text-left rounded-lg"
-      style="background-color: var(--background)"
+      class="news text-center md:text-left rounded-lg shadow-md"
+      style="background-color: var(--toolbar)"
     >
       <div class="flex flex-col md:flex-row">
         <div class="mb-6 w-auto basis-auto md:mb-0">
           <div
-            class="h-[100%] relative overflow-hidden rounded-t-lg md:rounded-l-lg bg-cover bg-no-repeat flex justify-center items-center"
+            class="h-[100%] relative overflow-hidden rounded-t-lg md:rounded-l-lg md:rounded-r-none bg-cover bg-no-repeat flex justify-center items-center"
             data-te-ripple-init
             data-te-ripple-color="light"
           >

@@ -1,0 +1,35 @@
+<div class="mx-auto max-w-screen-xl">
+  <ng-image-slider
+    [autoSlide]="{ interval: 2, stopOnHover: true }"
+    [animationSpeed]="2"
+    [imageSize]="{ width: imageWidth, height: 500, space: 0 }"
+    [imagePopup]="false"
+    [images]="imageObject"
+    #image
+    [infinite]="true"
+    (imageClick)="imageSliderClick($event)"
+    [showArrow]="false"
+  ></ng-image-slider>
+  <div class="naviagtion flex justify-end items-center px-6">
+    <button class="flex justify-center items-center" (click)="prevImageClick()">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        height="24"
+        viewBox="0 -960 960 960"
+        width="24"
+      >
+        <path d="M560-240 320-480l240-240 56 56-184 184 184 184-56 56Z" />
+      </svg>
+    </button>
+    <button class="flex justify-center items-center" (click)="nextImageClick()">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        height="24"
+        viewBox="0 -960 960 960"
+        width="24"
+      >
+        <path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z" />
+      </svg>
+    </button>
+  </div>
+</div>

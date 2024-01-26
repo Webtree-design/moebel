@@ -29,6 +29,7 @@ export class AppComponent {
   two: String = '';
   three: String = '';
   four: String = '';
+  five: String = '';
 
   constructor(
     public dataService: DataService,
@@ -88,6 +89,7 @@ export class AppComponent {
       this.elementRef.nativeElement.querySelector('#routerOutlet');
 
     const bounding = myElement.getBoundingClientRect();
+    console.log(bounding.top)
     if (bounding.top < 0) {
       this.toolbarStyle = 'ngStyleAfter';
     } else {
@@ -124,6 +126,10 @@ export class AppComponent {
     const section4 = this.elementRef.nativeElement
       .querySelector('#section4')
       .getBoundingClientRect();
+      
+    const section5 = this.elementRef.nativeElement
+      .querySelector('#section5')
+      .getBoundingClientRect();
 
      
     if (section1.top <= 0 && section1.bottom >= 90) {
@@ -145,6 +151,11 @@ export class AppComponent {
       this.four = 'fourActive';
     } else {
       this.four = '';
+    }
+    if (section5.top <= 90 && section5.bottom >= 90) {
+      this.five = 'fiveActive';
+    } else {
+      this.five = '';
     }
   }
 }

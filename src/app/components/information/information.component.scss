@@ -1,0 +1,13 @@
+.member:hover {
+  transition: var(--longTransition);
+  cursor: default;
+}
+
+.member {
+  transition: var(--longTransition);
+
+  min-height: 100px;
+  svg {
+    margin-right: 16px;
+  }
+}

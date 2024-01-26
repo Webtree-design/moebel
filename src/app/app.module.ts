@@ -17,7 +17,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
 import { MatExpansionModule } from '@angular/material/expansion';
 
-// Core Ui
+// slider
+import { NgImageSliderModule } from 'ng-image-slider';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -30,6 +31,7 @@ import { NewsComponent } from './components/news/news.component';
 import { KontaktComponent } from './components/kontakt/kontakt.component';
 import { ExpanderComponent } from './components/expander/expander.component';
 import { CaruselComponent } from './components/dialogs/carusel/carusel.component';
+import { InformationComponent } from './components/information/information.component';
 
 
 @NgModule({
@@ -41,7 +43,8 @@ import { CaruselComponent } from './components/dialogs/carusel/carusel.component
     NewsComponent,
     KontaktComponent,
     ExpanderComponent,
-    CaruselComponent
+    CaruselComponent,
+    InformationComponent
   ],
   imports: [
     BrowserModule, //.withServerTransition({ appId: 'serverApp' }),
@@ -64,7 +67,7 @@ import { CaruselComponent } from './components/dialogs/carusel/carusel.component
     MatSnackBarModule,
     MatExpansionModule,
 
-    
+    NgImageSliderModule
     
   ],
   providers: [],

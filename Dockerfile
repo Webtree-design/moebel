@@ -2,7 +2,7 @@
 FROM node:16
 
 COPY package.json .
-RUN npm install
+RUN npm install --force
 #RUN npm run build:ssr #run manually  
 COPY . .
 EXPOSE 4003
