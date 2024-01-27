@@ -32,7 +32,7 @@
     <div class="gap-4 basis-5/12 md:my-0 my-12 mb-0">
       <mat-stepper [linear]="true" #stepper>
         <mat-step [stepControl]="nineFormGroup">
-          <form [formGroup]="nineFormGroup" class="flex justify-end">
+          <form #form [formGroup]="nineFormGroup" class="flex justify-end">
             <div class="flex justify-center items-center flex-col">
               <mat-form-field>
                 <input
@@ -75,11 +75,7 @@
               >
                 <div class="box-agb text-xl">
                   Ich habe die
-                  <a
-                    routerLink="/datenschutzerklaerung"
-                    routerLinkActive="routeIsActive"
-                    >Datenschutzerklärung</a
-                  >
+                  <a routerLink="/datenschutz">Datenschutzerklärung</a>
                   gelesen und akzeptierte sie
                 </div>
               </mat-checkbox>
@@ -95,7 +91,7 @@
               class="w-2/3 senden-btn"
               style="color: var(--textcolor) !important"
               mat-button
-              (click)="createEmail()"
+              (click)="createEmail(form)"
             >
               Email Senden
             </button>

@@ -42,14 +42,14 @@ export class KontaktComponent {
     config.duration = 3000;
     this.snackBar.open(message, '', config);
   }
-  public async createEmail() {
+  public async createEmail(htmlform: any) {
     // if (!this.nineFormGroup.valid) return;
     const nineOptionName = this.nineFormGroup.get('eName')!.value;
     const nineOptionMail = this.nineFormGroup.get('eEmail')!.value;
     const nineOptionBetreff = this.nineFormGroup.get('eBetreff')!.value;
     const nineOptionMsg = this.nineFormGroup.get('eMessage')!.value;
 
-    const form:any = {
+    const form: any = {
       eName: nineOptionName,
       eEmail: nineOptionMail,
       eMessage: nineOptionMsg,
@@ -58,17 +58,10 @@ export class KontaktComponent {
       eCompany: env.eCompany,
       SMTPMail: env.SMTPMail,
     };
-    // console.log(form);
 
     this.kontactService.createEmail(form).subscribe((res) => {
-      this.form = this.formBuilder.group({
-        eName: ['', Validators.required], // Default value for Name field
-        eEmail: ['', [Validators.required, Validators.email]], // Default value for Email field
-        eBetreff: ['', Validators.required], // Default value for Betreff field
-        eMessage: ['', Validators.required], // Default value for Nachricht field
-        eCheckbox: [false, Validators.requiredTrue], // Default value for Checkbox field
-      });
-    this.openSnackBar('Email gesendet');
+      htmlform.reset();
+      this.openSnackBar('Email gesendet');
     });
   }
 }
