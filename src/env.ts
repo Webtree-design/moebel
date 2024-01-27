@@ -1,10 +1,10 @@
 export const env = {
-  apiURL: 'https://dashboard.webtreedesign.de:5500', //https://dashboard.webtreedesign.de:5500  //http://localhost:5500
-  user: 'webtreedesign',
+  apiURL: 'https://dashboard.moebel.de:5500', //https://dashboard.moebel.de:5500  //http://localhost:5500
+  user: 'moebel',
 
-  MailapiURL: 'https://webtree-design.de:5001',
-  eEmailTo: 'info@webtree-design.de',
+  MailapiURL: 'https://moebel.de:5001',
+  eEmailTo: 'info@moebel.de',
   eCompany: 'Webtree', // also used as smtp user ?????
-  SMTPMail: '<webtree@mail.webtree-design.de>',
+  SMTPMail: '<webtree@mail.moebel.de>',
   // firmenmail: 'info@mailvonderFirma.de', // also used as smtp user ?????
 };

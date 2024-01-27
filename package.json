@@ -1,5 +1,5 @@
 {
-  "name": "webtreedesign",
+  "name": "moebel",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
@@ -7,10 +7,10 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "dev:ssr": "ng run webtreedesign:serve-ssr",
-    "serve:ssr": "node dist/webtreedesign/server/main.js",
-    "build:ssr": "ng build && ng run webtreedesign:server",
-    "prerender": "ng run webtreedesign:prerender"
+    "dev:ssr": "ng run moebel:serve-ssr",
+    "serve:ssr": "node dist/moebel/server/main.js",
+    "build:ssr": "ng build && ng run moebel:server",
+    "prerender": "ng run moebel:prerender"
   },
   "private": true,
   "dependencies": {

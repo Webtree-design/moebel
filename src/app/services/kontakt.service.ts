@@ -18,7 +18,7 @@ export class KontaktService {
     eCompany: String;
     SMTPMail:String;
   }): Observable<IEmailModel> {
-    return this.http.post<any>(`${env.MailapiURL}/mail/sendmail`, emailForm);//change MAYBE to https://webtree-design.de:3000/
+    return this.http.post<any>(`${env.MailapiURL}/mail/sendmail`, emailForm);//change MAYBE to https://moebel.de:3000/
   }
 } 
 

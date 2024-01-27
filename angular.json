@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "webtreedesign": {
+    "moebel": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/webtreedesign/browser",
+            "outputPath": "dist/moebel/browser",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": [
@@ -65,10 +65,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "webtreedesign:build:production"
+              "browserTarget": "moebel:build:production"
             },
             "development": {
-              "browserTarget": "webtreedesign:build:development"
+              "browserTarget": "moebel:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -76,7 +76,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "webtreedesign:build"
+            "browserTarget": "moebel:build"
           }
         },
         "test": {
@@ -101,7 +101,7 @@
         "server": {
           "builder": "@angular-devkit/build-angular:server",
           "options": {
-            "outputPath": "dist/webtreedesign/server",
+            "outputPath": "dist/moebel/server",
             "main": "server.ts",
             "tsConfig": "tsconfig.server.json",
             "inlineStyleLanguage": "scss"
@@ -124,12 +124,12 @@
           "builder": "@nguniversal/builders:ssr-dev-server",
           "configurations": {
             "development": {
-              "browserTarget": "webtreedesign:build:development",
-              "serverTarget": "webtreedesign:server:development"
+              "browserTarget": "moebel:build:development",
+              "serverTarget": "moebel:server:development"
             },
             "production": {
-              "browserTarget": "webtreedesign:build:production",
-              "serverTarget": "webtreedesign:server:production"
+              "browserTarget": "moebel:build:production",
+              "serverTarget": "moebel:server:production"
             }
           },
           "defaultConfiguration": "development"
@@ -143,12 +143,12 @@
           },
           "configurations": {
             "production": {
-              "browserTarget": "webtreedesign:build:production",
-              "serverTarget": "webtreedesign:server:production"
+              "browserTarget": "moebel:build:production",
+              "serverTarget": "moebel:server:production"
             },
             "development": {
-              "browserTarget": "webtreedesign:build:development",
-              "serverTarget": "webtreedesign:server:development"
+              "browserTarget": "moebel:build:development",
+              "serverTarget": "moebel:server:development"
             }
           },
           "defaultConfiguration": "production"

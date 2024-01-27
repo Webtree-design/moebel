@@ -20,7 +20,7 @@ import { MatSnackBar, MatSnackBarConfig } from '@angular/material/snack-bar';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  title = 'webtreedesign';
+  title = 'moebel';
   public toolbarStyle: any = 'ngStyleBefore';
   firmenmail = 'mail.de';
   width: number = 0;
@@ -61,7 +61,6 @@ export class AppComponent {
   }
 
   openSnackBar(message: string, action: string) {
-    if (this.message[0].active != '1') return;
     this.snackBar.open(message, action);
   }
 

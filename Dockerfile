@@ -7,4 +7,4 @@ RUN npm install --force
 COPY . .
 EXPOSE 4003
 
-CMD ["node", "dist/webtreedesign/server/main.js"]
+CMD ["node", "dist/moebel/server/main.js"]
