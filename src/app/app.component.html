@@ -25,27 +25,41 @@
     <ul class="toolbar-ul flex flex-col py-0 p-4">
       <li class="my-[8px]">
         <a
-          (click)="scroll(section1); drawer.close()"
+          [routerLink]="['/start']"
+          fragment="webtree"
+          (click)="drawer.close()"
           class="startroute block rounded"
           >Start</a
         >
       </li>
       <mat-divider></mat-divider>
       <li class="my-[8px]">
-        <a (click)="scroll(section2); drawer.close()" class="block rounded"
+        <a
+          [routerLink]="['/start']"
+          fragment="ueberuns"
+          (click)="drawer.close()"
+          class="block rounded"
           >Über uns
         </a>
       </li>
 
       <mat-divider></mat-divider>
       <li class="my-[8px]">
-        <a (click)="scroll(section4); drawer.close()" class="block rounded"
+        <a
+          [routerLink]="['/start']"
+          fragment="news"
+          (click)="drawer.close()"
+          class="block rounded"
           >News
         </a>
       </li>
       <mat-divider></mat-divider>
       <li class="my-[8px]">
-        <a (click)="scroll(section5); drawer.close()" class="block rounded"
+        <a
+          [routerLink]="['/start']"
+          fragment="kontakt"
+          (click)="drawer.close()"
+          class="block rounded"
           >Kontakt
         </a>
       </li>
@@ -65,7 +79,7 @@
     <div
       class="w-[100%] flex flex-row justify-between mx-auto max-w-screen-xl px-3 py-3"
     >
-      <div class="cursor-pointer" (click)="scroll(section1)">
+      <div class="cursor-pointer" [routerLink]="['/start']" fragment="webtree">
         <img
           style="height: 70px"
           src="../assets/webtree/logo.png"
@@ -75,23 +89,39 @@
 
       <ul class="toolbar-ul gap-x-12 flex flex-row items-center justify-center">
         <li>
-          <a [ngClass]="one" (click)="scroll(section1)" class="block rounded"
+          <a
+            [ngClass]="one"
+            [routerLink]="['/start']"
+            fragment="webtree"
+            class="block rounded"
             >Start</a
           >
         </li>
         <li>
-          <a [ngClass]="two" (click)="scroll(section2)" class="block rounded"
+          <a
+            [ngClass]="two"
+            [routerLink]="['/start']"
+            fragment="ueberuns"
+            class="block rounded"
             >Über uns</a
           >
         </li>
 
         <li>
-          <a [ngClass]="four" (click)="scroll(section4)" class="block rounded"
+          <a
+            [ngClass]="four"
+            [routerLink]="['/start']"
+            fragment="news"
+            class="block rounded"
             >News</a
           >
         </li>
         <li>
-          <a [ngClass]="five" (click)="scroll(section5)" class="block rounded"
+          <a
+            [ngClass]="five"
+            [routerLink]="['/start']"
+            fragment="kontakt"
+            class="block rounded"
             >Kontakt</a
           >
         </li>
@@ -105,7 +135,7 @@
     class="fixed flex justify-between items-center md:hidden w-[100%] h-[90px] px-6"
     style="z-index: 100"
   >
-    <div class="cursor-pointer" (click)="scroll(section1)">
+    <div class="cursor-pointer" [routerLink]="['/start']" fragment="webtree">
       <img
         style="height: 70px"
         src="../assets/webtree/logo.png"
@@ -126,29 +156,8 @@
     </button>
   </div>
 
-  <div
-    [ngClass]="currentRoute ? 'impressum' : 'impressum'"
-    #routerOutlet
-    id="routerOutlet"
-    class="router-outlet"
-  >
-    <div #section1 id="section1">
-      <app-start></app-start>
-    </div>
-    <div #section2 id="section2">
-      <app-ueberuns></app-ueberuns>
-    </div>
-    <div #section3 id="section3">
-      <app-information></app-information>
-      <div class="banner"></div>
-    </div>
-    <div #section4 id="section4">
-      <app-news></app-news>
-    </div>
-    <div #section5 id="section5">
-      <app-kontakt></app-kontakt>
-      <app-expander></app-expander>
-    </div>
+  <div #routerOutlet id="routerOutlet" class="router-outlet">
+    <router-outlet></router-outlet>
   </div>
 
   <footer
@@ -158,9 +167,10 @@
     <div class="notranslate mx-auto flex flex-col text-center items-center">
       <span class="text-sm">
         <!-- clickscroll -->
-        <p (click)="scroll(section1)" class="hover:underline">Webtree-Design</p>
+        <p [routerLink]="['/start']" fragment="webtree" class="hover:underline mb-3">
+          Webtree-Design
+        </p>
       </span>
-      <br />
       <ul
         class="container mx-auto flex flex-col md:flex-row text-center items-center gap-2 md:gap-6"
       >

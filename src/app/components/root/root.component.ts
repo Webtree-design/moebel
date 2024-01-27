@@ -5,50 +5,42 @@ import {
   Inject,
   ViewChild,
 } from '@angular/core';
-import { DataService } from './services/data.service';
-import { PopupComponent } from './components/dialogs/popup/popup.component';
+import { DataService } from 'src/app/services/data.service';
+
 import { Dialog, DialogModule, DialogRef } from '@angular/cdk/dialog';
 import { PLATFORM_ID } from '@angular/core';
 import { isPlatformBrowser } from '@angular/common';
 import { ActivatedRoute, Router } from '@angular/router';
 import { MatSnackBar, MatSnackBarConfig } from '@angular/material/snack-bar';
 
-
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss'],
+  templateUrl: './root.component.html',
+  styleUrls: ['./root.component.scss'],
 })
-export class AppComponent {
+export class RootComponent {
   title = 'webtreedesign';
   public toolbarStyle: any = 'ngStyleBefore';
   firmenmail = 'mail.de';
   width: number = 0;
   public message: any = [];
-  private isBrowser: any;
+
   one: String = '';
   two: String = '';
   three: String = '';
   four: String = '';
   five: String = '';
-  fragment: any;
 
   constructor(
-    @Inject(PLATFORM_ID) platformId: string,
     public dataService: DataService,
     public dialog: Dialog,
     private router: Router,
-    private elementRef: ElementRef,
-    public snackBar: MatSnackBar,
-    private route: ActivatedRoute
-  ) {
-    this.isBrowser = isPlatformBrowser(platformId);
-  }
+    public snackBar: MatSnackBar
+  ) {}
 
   @HostListener('window:scroll', ['$event'])
   onWindowScroll(event: any) {
     this.width = window.innerWidth;
-    this.checkElementViewport();
   }
   @HostListener('window:load', ['$event'])
   onLoad(event: any) {
@@ -74,18 +66,5 @@ export class AppComponent {
       // this.openDialog();
       this.openSnackBar(this.message[0].title, 'OK!');
     });
-  }
-
-  private checkElementViewport() {
-    const myElement =
-      this.elementRef.nativeElement.querySelector('#routerOutlet');
-
-    const bounding = myElement.getBoundingClientRect();
-    // console.log(bounding.top);
-    if (bounding.top < 0) {
-      this.toolbarStyle = 'ngStyleAfter';
-    } else {
-      this.toolbarStyle = 'ngStyleBefore';
-    }
   }
 }

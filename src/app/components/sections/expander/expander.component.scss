@@ -9,6 +9,10 @@
   background-color: var(--toolbar) !important;
   height: auto !important;
   min-height: 50px !important ;
+  p {
+    font-size: 1rem !important;
+    line-height: 1.5rem !important;
+  }
 }
 
 * {
@@ -18,3 +22,9 @@
 ::ng-deep .mat-expansion-panel:not([class*="mat-elevation-z"]) {
   box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1) !important;
 }
+
+::ng-deep .mat-expansion-panel-body {
+  padding: 24px !important;
+  padding-top: 6px !important;
+}
+

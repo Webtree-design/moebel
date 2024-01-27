@@ -24,16 +24,17 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-import { StartComponent } from './components/start/start.component';
-import { UeberunsComponent } from './components/ueberuns/ueberuns.component';
+import { StartComponent } from './components/sections/start/start.component';
+import { UeberunsComponent } from './components/sections/ueberuns/ueberuns.component';
 import { PopupComponent } from './components/dialogs/popup/popup.component';
-import { NewsComponent } from './components/news/news.component';
-import { KontaktComponent } from './components/kontakt/kontakt.component';
-import { ExpanderComponent } from './components/expander/expander.component';
+import { NewsComponent } from './components/sections/news/news.component';
+import { KontaktComponent } from './components/sections/kontakt/kontakt.component';
+import { ExpanderComponent } from './components/sections/expander/expander.component';
 import { CaruselComponent } from './components/dialogs/carusel/carusel.component';
-import { InformationComponent } from './components/information/information.component';
+import { InformationComponent } from './components/sections/information/information.component';
 import { ImpressumComponent } from './components/impressum/impressum.component';
 import { DatenschutzComponent } from './components/datenschutz/datenschutz.component';
+import { RootComponent } from './components/root/root.component';
 
 
 @NgModule({
@@ -48,7 +49,8 @@ import { DatenschutzComponent } from './components/datenschutz/datenschutz.compo
     CaruselComponent,
     InformationComponent,
     ImpressumComponent,
-    DatenschutzComponent
+    DatenschutzComponent,
+    RootComponent
   ],
   imports: [
     BrowserModule, //.withServerTransition({ appId: 'serverApp' }),

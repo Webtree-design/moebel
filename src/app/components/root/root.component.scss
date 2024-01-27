@@ -1,0 +1,31 @@
+@supports (-webkit-touch-callout: none) {
+  /* CSS specific to iOS devices */
+  .banner {
+    height: 190px;
+    width: 100%;
+    background-position: 50% 10%;
+    background-image: url(../../../assets/webtree/preiseWald.jpg);
+    opacity: 0.8;
+    background-repeat: no-repeat;
+  }
+}
+
+@supports not (-webkit-touch-callout: none) {
+  /* CSS for other than iOS devices */
+  .banner {
+    height: 190px;
+    width: 100%;
+    background-position: 50% 50%;
+    background-image: url(../../../assets/webtree/preiseWald.jpg);
+    opacity: 0.8;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  }
+}
+
+div.anchor {
+  display: block;
+  position: relative;
+  top: -85px;
+  visibility: hidden;
+}

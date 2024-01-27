@@ -1,9 +1,9 @@
 <section class="mx-auto max-w-screen-xl px-6 pt-12">
-  <h2 class="text-right text-4xl font-bold">NEUES</h2>
+  <h2 class="text-right text-4xl font-bold mb-6">NEUES</h2>
 </section>
 
 <section
-  class="team px-6 py-12 flex flex-col gap-6"
+  class="team px-6 pb-12 flex flex-col gap-6"
   style="background-color: var(--background)"
 >
   <div
@@ -32,13 +32,13 @@
         </div>
 
         <div class="w-full flex flex-col basis-auto p-6">
-          <h5 class="mb-3 text-lg font-bold">{{ item.title }}</h5>
+          <h5 class="mb-3 text-2xl font-bold">{{ item.title }}</h5>
 
-          <p class="">
+          <p class="text-xl">
             {{ item.content }}
           </p>
 
-          <div class="font-thin text-xs mt-auto flex justify-end">
+          <div class="font-thin text-base mt-auto flex justify-end">
             <p>Veröffentlicht am {{ formattedDateString(item.timestamp) }}</p>
           </div>
         </div>

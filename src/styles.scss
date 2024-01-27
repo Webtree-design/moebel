@@ -49,6 +49,8 @@ body {
   font-family: "Forum", sans-serif;
   // color: var(--textcolor);
   background-color: var(--toolbar);
+  font-size: 1.25rem;
+  line-height: 1.75rem;
 }
 @font-face {
   font-family: "Forum";
@@ -72,9 +74,9 @@ body {
   --toolbar: #f3f0eb;
   --textcolor: #212121;
 
-
-
   --background-X: #9394964b;
+
+  --fontsize: 20px;
 }
 
 ::ng-deep {
@@ -147,4 +149,8 @@ body {
   img {
     transition: var(--longTransition);
   }
+}
+
+html {
+  scroll-behavior: smooth;
 }

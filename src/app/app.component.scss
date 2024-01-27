@@ -20,30 +20,7 @@
   background-color: var(--background);
 }
 
-@supports (-webkit-touch-callout: none) {
-  /* CSS specific to iOS devices */
-  .banner {
-    height: 190px;
-    width: 100%;
-    background-position: 50% 10%;
-    background-image: url("../assets/motorcycle-459594_1920.jpg");
-    opacity: 0.8;
-    background-repeat: no-repeat;
-  }
-}
 
-@supports not (-webkit-touch-callout: none) {
-  /* CSS for other than iOS devices */
-  .banner {
-    height: 190px;
-    width: 100%;
-    background-position: 50% 50%;
-    background-image: url("../assets/motorcycle-459594_1920.jpg");
-    opacity: 0.8;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-  }
-}
 
 ::ng-deep .ngStyleAfter {
   background-color: var(--toolbar);
